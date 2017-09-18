@@ -13,6 +13,10 @@ public class initOne {
         jedis.set("name","xinxin");//向key-->name中放入了value-->xinxin
         System.out.println(jedis.get("name"));//执行结果：xinxin
 
+        //测试中文字符
+        jedis.set("gender","男");
+        System.out.println(jedis.get("gender"));
+
     }
 
 }
