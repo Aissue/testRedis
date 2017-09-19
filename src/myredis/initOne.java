@@ -17,6 +17,10 @@ public class initOne {
         jedis.set("gender","男");
         System.out.println(jedis.get("gender"));
 
+        Jedis jedis1 = RedisUtil.getJedis();
+        jedis1.del("tel");
+        RedisUtil.returnResource(jedis1);
+
     }
 
 }
